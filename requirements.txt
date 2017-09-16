@@ -1,2 +1,9 @@
 Flask==0.12.2
 Flask_Bcrypt==0.7.1
+mysql-python
+sqlalchemy
+Flask-SQLAlchemy==1.0
+Flask-WTF==0.9.3
+Flask-Script
+Flask-Migrate
+simplejson
