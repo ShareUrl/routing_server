@@ -21,7 +21,7 @@ def main():
 
 @app.route("/<url>")
 def sendData(url):
-    print url
+    print(url)
     return render_template('navigate.html')
 
 def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
@@ -53,7 +53,7 @@ def createUrl():
     val = id_generator()
     query = "INSERT INTO book(value,tags) VALUES(%s,%s);"
     args = (val,data)
-    print val , data
+    print (val , data)
     cursor.execute(query,args)
     happn = cursor.fetchall()
     if len(happn) is 0:
