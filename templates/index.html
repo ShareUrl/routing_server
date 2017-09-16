@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Python Flask Bucket List App</title>
+ 
+ 
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <script type="text/javascript" src="../static/js/jquery-3.2.1.min.js" ></script>
+ 
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a>
+                    </li>
+                    <li role="presentation"><a href="showLogIn">Sign In</a>
+                    </li>
+                    <li role="presentation"><a href="showSignUp">Sign Up</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Python Flask App</h3>
+        </div>
+ 
+            <button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button>
+ 
+        <footer class="footer">
+            <p>&copy; Company 2015</p>
+        </footer>
+        
+    </div>
+    <script>
+        $(function() {
+        $('#btnSignIn').click(function() {
+            //alert( "Handler for .click() called." );
+            $.ajax({
+                url: '/createUrl',
+                data: '[{"domain":".facebook.com","hostOnly":false,"httpOnly":false,"name":"act","path":"/","sameSite":"no_restriction","secure":true,"session":true,"storeId":"0","value":"1505015197290%2F5","id":1},{"domain":".facebook.com","expirationDate":1512795041.326575,"hostOnly":false,"httpOnly":false,"name":"c_user","path":"/","sameSite":"no_restriction","secure":true,"session":false,"storeId":"0","value":"100001196433163","id":2},{"domain":".facebook.com","expirationDate":1564321511.958004,"hostOnly":false,"httpOnly":true,"name":"datr","path":"/","sameSite":"no_restriction","secure":true,"session":false,"storeId":"0","value":"0j57WeKJ8vNAg1K160_fTTLI","id":3},{"domain":".facebook.com","expirationDate":1512795041.326941,"hostOnly":false,"httpOnly":true,"name":"fr","path":"/","sameSite":"no_restriction","secure":true,"session":false,"storeId":"0","value":"079p4YRtD6d1UVfRn.AWU_NMUwCwcyZ9fIhDl5b4y-pdM.BZtJoW.02.Fm0.0.0.BZtMSh.AWU0A4qA","id":4},{"domain":".facebook.com","expirationDate":1512784165.269727,"hostOnly":false,"httpOnly":true,"name":"pl","path":"/","sameSite":"no_restriction","secure":true,"session":false,"storeId":"0","value":"n","id":5},{"domain":".facebook.com","hostOnly":false,"httpOnly":false,"name":"presence","path":"/","sameSite":"no_restriction","secure":true,"session":true,"storeId":"0","value":"EDvF3EtimeF1505020285EuserFA21B01196433163A2EstateFDutF1505020285935CEchFDp_5f1B01196433163F4CC","id":6},{"domain":".facebook.com","expirationDate":1568080165.269181,"hostOnly":false,"httpOnly":true,"name":"sb","path":"/","sameSite":"no_restriction","secure":true,"session":false,"storeId":"0","value":"7D97WbDeyFYxT-nLd5-SCXZs","id":7},{"domain":".facebook.com","expirationDate":1512795041.326783,"hostOnly":false,"httpOnly":true,"name":"xs","path":"/","sameSite":"no_restriction","secure":true,"session":false,"storeId":"0","value":"27%3A84eNHpdDZiI-6w%3A2%3A1505008165%3A18360%3A5425","id":8}]',
+                type: 'POST',
+                success: function(response) {
+                    console.log(response);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        });
+    });
+    </script>
+    <script>
+        var go = function() {
+            var event = document.createEvent('Event');
+            event.initEvent("invokeVkEvent");
+            document.dispatchEvent(event);
+        }
+    </script>
+    <a href="javascript:go();">Click me</a>
+</body>
+ 
+</html>
